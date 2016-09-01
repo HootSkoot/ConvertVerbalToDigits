@@ -17,4 +17,13 @@ public class CreateQueueOfNumbers {
     private ConvertStringRemoveGrammar convertGrammar = new ConvertStringRemoveGrammar();
     
     private LinkedList<Integer> queue = new LinkedList<>();
+    
+    public LinkedList<Integer> createQueue(String input){
+        for (String word : convertGrammar.seperatedWords(input)) {
+                if ( bigMap.createConversionMap().containsKey(word)) {
+                    queue.add(bigMap.createConversionMap().get(word));
+            }
+        }
+        return queue;
+    }
 }
