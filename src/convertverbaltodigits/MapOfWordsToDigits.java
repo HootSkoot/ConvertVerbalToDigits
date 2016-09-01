@@ -34,7 +34,7 @@ public class MapOfWordsToDigits {
     
     public HashMap<String, Integer> createConversionMap(){
         for (int i = 0; i < NUMBERS.length; i++) {
-            //create 
+            //create map for string comparison
             map.put(NUMBERS[i], DIGITS[i]);
         }
         return map;
